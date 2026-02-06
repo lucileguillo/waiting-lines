@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // max image
 
-  const MAX_IMAGES = 5;
+  const MAX_IMAGES = 10;
   const sceneImages = [];
 
   validationEl.addEventListener("click", () => {
