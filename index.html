@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game-waitingline</title>
+
+    <!-- fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css & scripts -->
+
+    <link rel="stylesheet" href="src\style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js" />
+
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <div class="drawing-window" data-field>
+      <!-- canvas -->
+      <div class="drawing-panel">
+        <canvas data-canvas></canvas>
+      </div>
+
+      <!-- control panel with btns -->
+
+      <div class="control-panel" data-tools>
+        <div class="bloc-consignes">
+          <div class="control-consignes">
+            <h1>Consigne</h1>
+          </div>
+
+          <p>
+            Colorie ta poupée avec le crayon situé juste en dessous. Une fois
+            que tu lui auras fait de beaux vêtements, clique sur le bouton
+            «valider» pour la voir danser avec les autres.
+          </p>
+        </div>
+
+        <div class="bloc-btn">
+          <!-- btn control -->
+
+          <div class="outils_container">
+            <div class="outils">
+              <div class="crayon">
+                <img
+                  src="assets/images/crayon.png"
+                  width="100px"
+                  class="icon_pen"
+                  style="transform: rotate(46deg)"
+                />
+
+                <div class="pen">
+                  <!-- color picker ( color picker or colors already picked )-->
+
+                  <div class="pickers-container">
+
+                    <p>Couleur</p>
+
+                    <input type="color" class="color-picker" data-colorPicker />
+
+                  </div>
+
+                  <!-- pen range size -->
+
+                  <div class="pickers-container">
+
+                    <p>épaisseur</p>
+
+                    <input
+                      type="range"
+                      min="5"
+                      max="50"
+                      class="pen-range"
+                      data-range
+                    />
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="gomme">
+                <img
+                  src="assets/images/gomme.png"
+                  width="100px"
+                  style="transform: rotate(46deg)"
+                />
+
+                <p>Gomme en maintenance</p>
+              </div>
+            </div>
+
+            <div class="outils-btn">
+              <button type="button" class="annuler" data-undo>
+                <img src="assets/images/Flèche.png" width="40px" /> ANNULER
+              </button>
+              <button type="button" class="effacer" data-clear>
+                <img src="assets/images/croix.png" width="40px" /> TOUT EFFACER
+              </button>
+            </div>
+          </div>
+
+          <!--validation -->
+
+          <div class="btn-submit">
+            <a href="#" id="validation" data-validation>
+              <img
+                src="assets\images\balloons.png"
+                alt="balloons illustrations"
+                width="90px"
+              />
+
+              <p class="submit-text">Valider !</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container-img"></div>
+
+    <div class="scene-container">
+      <canvas data-scene></canvas>
+    </div>
+  </body>
+</html>
